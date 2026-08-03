@@ -33,7 +33,7 @@ import java.util.stream.Stream;
 
 public class GlobalConstants {
 
-    public static final boolean[] bannedRandomMoves = new boolean[827], bannedForDamagingMove = new boolean[827];
+    public static final boolean[] bannedRandomMoves = new boolean[921], bannedForDamagingMove = new boolean[921];
     static {
         bannedRandomMoves[Moves.struggle] = true; //  self explanatory
 
@@ -66,17 +66,26 @@ public class GlobalConstants {
         bannedForDamagingMove[Moves.fissure] = true;
         bannedForDamagingMove[Moves.sheerCold] = true;
 
+        // Expansion
+        bannedForDamagingMove[Moves.mistyExplosion] = true;
+
     }
 
     /* @formatter:off */
     public static final List<Integer> normalMultihitMoves = Arrays.asList(
             Moves.armThrust, Moves.barrage, Moves.boneRush, Moves.bulletSeed, Moves.cometPunch, Moves.doubleSlap,
             Moves.furyAttack, Moves.furySwipes, Moves.icicleSpear, Moves.pinMissile, Moves.rockBlast, Moves.spikeCannon,
-            Moves.tailSlap, Moves.waterShuriken);
+            Moves.tailSlap, Moves.waterShuriken,
+
+            // Expansion
+            Moves.scaleShot, Moves.populationBomb);
 
     public static final List<Integer> doubleHitMoves = Arrays.asList(
             Moves.bonemerang, Moves.doubleHit, Moves.doubleIronBash, Moves.doubleKick, Moves.dragonDarts,
-            Moves.dualChop, Moves.gearGrind, Moves.twineedle);
+            Moves.dualChop, Moves.gearGrind, Moves.twineedle,
+
+            // Expansion
+            Moves.doubleIronBash, Moves.dragonDarts, Moves.dualWingbeat, Moves.twinBeam, Moves.tachyonCutter);
 
     public static final List<Integer> varyingPowerZMoves = Arrays.asList(
             Moves.breakneckBlitzPhysical, Moves.breakneckBlitzSpecial,
@@ -172,11 +181,14 @@ public class GlobalConstants {
                 break;
             case 8:
                 map.put(Species.aegislash,new StatChange(Stat.DEF.val | Stat.SPDEF.val,140,140));
+                map.put(Species.USUMFormes.aegislashB,new StatChange(Stat.ATK.val | Stat.SPATK.val,140,140));
                 break;
             case 9:
                 map.put(Species.cresselia,new StatChange(Stat.DEF.val | Stat.SPDEF.val, 110,120));
                 map.put(Species.zacian,new StatChange(Stat.ATK.val, 120));
                 map.put(Species.zamazenta,new StatChange(Stat.ATK.val, 120));
+                map.put(Species.USUMFormes.zacianC,new StatChange(Stat.ATK.val, 150));
+                map.put(Species.USUMFormes.zamazentaC,new StatChange(Stat.ATK.val | Stat.DEF.val, 120,140));
                 break;
         }
         return map;
@@ -201,14 +213,20 @@ public class GlobalConstants {
 
     public static final List<Integer> doubleBattleAbilities = Arrays.asList(
             Abilities.friendGuard, Abilities.healer, Abilities.telepathy, Abilities.symbiosis,
-            Abilities.battery
+            Abilities.battery,
+
+            // Expansion
+            Abilities.powerSpot, Abilities.curiousMedicine, Abilities.costar, Abilities.hospitality
     );
 
     public static final List<Integer> duplicateAbilities = Arrays.asList(
             Abilities.vitalSpirit, Abilities.whiteSmoke, Abilities.purePower, Abilities.shellArmor, Abilities.airLock,
             Abilities.solidRock, Abilities.ironBarbs, Abilities.turboblaze, Abilities.teravolt, Abilities.emergencyExit,
             Abilities.dazzling, Abilities.tanglingHair, Abilities.powerOfAlchemy, Abilities.fullMetalBody,
-            Abilities.shadowShield, Abilities.prismArmor, Abilities.libero, Abilities.stalwart
+            Abilities.shadowShield, Abilities.prismArmor,
+
+            // Expansion
+            Abilities.libero, Abilities.stalwart, Abilities.chillingNeigh, Abilities.armorTail
     );
 
     public static final List<Integer> noPowerNonStatusMoves = Arrays.asList(
@@ -248,6 +266,6 @@ public class GlobalConstants {
 
     public static final int HIGHEST_POKEMON_GEN = 9;
 
-    // Eevee has 8 potential evolutions
-    public static final int LARGEST_NUMBER_OF_SPLIT_EVOS = 8;
+    // Milcery has 9 potential evolutions
+    public static final int LARGEST_NUMBER_OF_SPLIT_EVOS = 9;
 }

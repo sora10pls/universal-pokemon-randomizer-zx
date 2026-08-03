@@ -38,10 +38,13 @@ public class Gen7Constants {
     public static final int Type_SM = N3DSConstants.Type_SM;
     public static final int Type_USUM = N3DSConstants.Type_USUM;
 
-    private static final int pokemonCountSM = 802, pokemonCountUSUM = 807;
-    private static final int formeCountSM = 158, formeCountUSUM = 168;
-    private static final int moveCountSM = 719, moveCountUSUM = 728;
-    private static final int highestAbilityIndexSM = Abilities.prismArmor, highestAbilityIndexUSUM = Abilities.neuroforce;
+    private static final int pokemonCountSM = 802, pokemonCountUSUM = 1025; // Expansion: up from 807
+    private static final int formeCountSM = 158, formeCountUSUM = 304; // Expansion: up from 168
+    private static final int moveCountSM = 719, moveCountUSUM = 920; // Expansion: up from 728
+    private static final int highestAbilityIndexSM = Abilities.prismArmor, highestAbilityIndexUSUM = Abilities.fireMane; // Expansion: up from Neuroforce
+
+    public static final Map<Integer,List<Integer>> speciesToMegaStoneSM = setupSpeciesToMegaStone(Type_SM);
+    public static final Map<Integer,List<Integer>> speciesToMegaStoneUSUM = setupSpeciesToMegaStone(Type_USUM);
 
     public static final int bsHPOffset = 0, bsAttackOffset = 1, bsDefenseOffset = 2, bsSpeedOffset = 3,
             bsSpAtkOffset = 4, bsSpDefOffset = 5, bsPrimaryTypeOffset = 6, bsSecondaryTypeOffset = 7,
@@ -55,10 +58,26 @@ public class Gen7Constants {
     public static final int evolutionMethodCount = 42;
 
     private static List<Integer> speciesWithAlolanForms = Arrays.asList(
-            Species.rattata, Species.raticate, Species.raichu, Species.sandshrew, Species.sandslash, Species.vulpix,
-            Species.ninetales, Species.diglett, Species.dugtrio, Species.meowth, Species.persian, Species.geodude,
+            Species.rattata, Species.raticate, Species.sandshrew, Species.sandslash, Species.vulpix,
+            Species.ninetales, Species.diglett, Species.dugtrio, Species.persian, Species.geodude,
             Species.graveler, Species.golem, Species.grimer, Species.muk, Species.exeggutor, Species.marowak
+            // Raichu and Meowth handled elsewhere
     );
+
+    private static List<Integer> speciesWithGalarianForms = Arrays.asList(
+            Species.ponyta, Species.rapidash, Species.slowpoke, Species.farfetchd, Species.weezing, Species.mrMime,
+            Species.articuno, Species.zapdos, Species.moltres, Species.slowking, Species.corsola, Species.zigzagoon,
+            Species.linoone, Species.darumaka, Species.yamask, Species.stunfisk
+            // Meowth, Slowbro, and Darmanitan handled elsewhere
+    );
+
+    private static List<Integer> speciesWithHisuianForms = Arrays.asList(
+            Species.growlithe, Species.arcanine, Species.voltorb, Species.electrode, Species.typhlosion, Species.qwilfish,
+            Species.sneasel, Species.samurott, Species.lilligant, Species.zorua, Species.zoroark, Species.braviary,
+            Species.sliggoo, Species.goodra, Species.avalugg, Species.decidueye
+    );
+
+    private static List<Integer> speciesWithPaldeanForms = Arrays.asList(Species.tauros, Species.wooper);
 
     private static final Map<Integer,String> dummyFormeSuffixes = setupDummyFormeSuffixes();
     private static final Map<Integer,Map<Integer,String>> formeSuffixesByBaseForme = setupFormeSuffixesByBaseForme();
@@ -198,7 +217,67 @@ public class Gen7Constants {
             Species.USUMFormes.miniorC,
             Species.USUMFormes.necrozmaDM,
             Species.USUMFormes.necrozmaDW,
-            Species.USUMFormes.necrozmaU
+            Species.USUMFormes.necrozmaU,
+
+            // Expansion
+            Species.USUMFormes.pikachuCosmetic8,
+            Species.USUMFormes.raichuMegaX,
+            Species.USUMFormes.raichuMegaY,
+            Species.USUMFormes.clefableMega,
+            Species.USUMFormes.victreebelMega,
+            Species.USUMFormes.starmieMega,
+            Species.USUMFormes.dragoniteMega,
+            Species.USUMFormes.meganiumMega,
+            Species.USUMFormes.feraligatrMega,
+            Species.USUMFormes.skarmoryMega,
+            Species.USUMFormes.chimechoMega,
+            Species.USUMFormes.absolMegaZ,
+            Species.USUMFormes.staraptorMega,
+            Species.USUMFormes.garchompMegaZ,
+            Species.USUMFormes.lucarioMegaZ,
+            Species.USUMFormes.froslassMega,
+            Species.USUMFormes.heatranMega,
+            Species.USUMFormes.darkraiMega,
+            Species.USUMFormes.emboarMega,
+            Species.USUMFormes.excadrillMega,
+            Species.USUMFormes.scolipedeMega,
+            Species.USUMFormes.darmanitanGZ,
+            Species.USUMFormes.scraftyMega,
+            Species.USUMFormes.eelektrossMega,
+            Species.USUMFormes.chandelureMega,
+            Species.USUMFormes.golurkMega,
+            Species.USUMFormes.chesnaughtMega,
+            Species.USUMFormes.delphoxMega,
+            Species.USUMFormes.greninjaMega,
+            Species.USUMFormes.pyroarMega,
+            Species.USUMFormes.floetteMega,
+            Species.USUMFormes.meowsticMega,
+            Species.USUMFormes.meowsticMegaF,
+            Species.USUMFormes.malamarMega,
+            Species.USUMFormes.barbaracleMega,
+            Species.USUMFormes.dragalgeMega,
+            Species.USUMFormes.hawluchaMega,
+            Species.USUMFormes.zygardeMega,
+            Species.USUMFormes.crabominableMega,
+            Species.USUMFormes.golisopodMega,
+            Species.USUMFormes.drampaMega,
+            Species.USUMFormes.magearnaMega,
+            Species.USUMFormes.magearnaMegaCosmetic1,
+            Species.USUMFormes.zeraoraMega,
+            Species.USUMFormes.cramorantGu,
+            Species.USUMFormes.cramorantGo,
+            Species.USUMFormes.falinksMega,
+            Species.USUMFormes.morpekoH,
+            Species.USUMFormes.zacianC,
+            Species.USUMFormes.zamazentaC,
+            Species.USUMFormes.eternatusE,
+            Species.USUMFormes.scovillainMega,
+            Species.USUMFormes.palafinH,
+            Species.USUMFormes.glimmoraMega,
+            Species.USUMFormes.tatsugiriMegaCosmetic1,
+            Species.USUMFormes.tatsugiriMegaCosmetic2,
+            Species.USUMFormes.baxcaliburMega,
+            Species.USUMFormes.terapagosS
     );
 
     public static final MoveCategory[] moveCategoryIndices = { MoveCategory.STATUS, MoveCategory.PHYSICAL,
@@ -223,7 +302,15 @@ public class Gen7Constants {
             noDamageStatusAndStatChangeQuality = 5, damageTargetDebuffQuality = 6, damageUserBuffQuality = 7,
             damageAbsorbQuality = 8;
 
-    public static List<Integer> bannedMoves = Arrays.asList(Moves.darkVoid, Moves.hyperspaceFury);
+    public static List<Integer> bannedMoves = Arrays.asList(Moves.darkVoid, Moves.hyperspaceFury,
+
+            // Expansion
+            Moves.zippyZap, Moves.splishySplash, Moves.floatyFall, Moves.pikaPapow, Moves.bouncyBubble, Moves.buzzyBuzz,
+            Moves.sizzlySlide, Moves.glitzyGlow, Moves.baddyBad, Moves.sappySeed, Moves.freezeDry, Moves.sparklySwirl, Moves.veeveeVolley,
+            Moves.maxGuard, Moves.maxFlare, Moves.maxFlutterby, Moves.maxLightning, Moves.stringShot, Moves.maxKnuckle, Moves.maxPhantasm,
+            Moves.maxHailstorm, Moves.maxOoze, Moves.maxGeyser, Moves.maxAirstream, Moves.maxStarfall, Moves.maxWyrmwind,
+            Moves.maxMindstorm, Moves.maxRockfall, Moves.maxQuake, Moves.maxDarkness, Moves.maxOvergrowth, Moves.maxSteelspike
+    );
 
     public static final Type[] typeTable = constructTypeTable();
 
@@ -253,7 +340,13 @@ public class Gen7Constants {
             Items.thunderStone, Items.waterStone, Items.leafStone, Items.shinyStone, Items.duskStone, Items.dawnStone,
             Items.ovalStone, Items.kingsRock, Items.deepSeaTooth, Items.deepSeaScale, Items.metalCoat, Items.dragonScale,
             Items.upgrade, Items.protector, Items.electirizer, Items.magmarizer, Items.dubiousDisc, Items.reaperCloth,
-            Items.razorClaw, Items.razorFang, Items.prismScale, Items.whippedDream, Items.sachet, Items.iceStone);
+            Items.razorClaw, Items.razorFang, Items.prismScale, Items.whippedDream, Items.sachet, Items.iceStone,
+
+            // Expansion
+            Items.galaricaCuff, Items.galaricaWreath, Items.tartApple, Items.sweetApple, Items.crackedPot, Items.chippedPot,
+            Items.strawberrySweet, Items.berrySweet, Items.loveSweet, Items.starSweet, Items.cloverSweet, Items.flowerSweet, Items.ribbonSweet,
+            Items.darknessScroll, Items.scrollofWaters, Items.blackAugurite, Items.peatBlock, Items.auspiciousArmor, Items.maliciousArmor,
+            Items.leadersCrest, Items.syrupyApple, Items.unremarkableCup, Items.masterpieceCup, Items.gimmighoulCoin);
 
     private static final List<Boolean> relevantEncounterFilesSM = setupRelevantEncounterFiles(Type_SM);
     private static final List<Boolean> relevantEncounterFilesUSUM = setupRelevantEncounterFiles(Type_USUM);
@@ -292,17 +385,28 @@ public class Gen7Constants {
         map.put(Abilities.roughSkin, Arrays.asList(Abilities.roughSkin, Abilities.ironBarbs));
         map.put(Abilities.moldBreaker, Arrays.asList(Abilities.moldBreaker, Abilities.turboblaze, Abilities.teravolt));
         map.put(Abilities.wimpOut, Arrays.asList(Abilities.wimpOut, Abilities.emergencyExit));
-        map.put(Abilities.queenlyMajesty, Arrays.asList(Abilities.queenlyMajesty, Abilities.dazzling));
+        map.put(Abilities.queenlyMajesty, Arrays.asList(Abilities.queenlyMajesty, Abilities.dazzling, Abilities.armorTail)); // Expansion
         map.put(Abilities.gooey, Arrays.asList(Abilities.gooey, Abilities.tanglingHair));
         map.put(Abilities.receiver, Arrays.asList(Abilities.receiver, Abilities.powerOfAlchemy));
         map.put(Abilities.multiscale, Arrays.asList(Abilities.multiscale, Abilities.shadowShield));
+
+        // Expansion
+        map.put(Abilities.protean, Arrays.asList(Abilities.protean, Abilities.libero));
+        map.put(Abilities.propellerTail, Arrays.asList(Abilities.propellerTail, Abilities.stalwart));
+        map.put(Abilities.moxie, Arrays.asList(Abilities.moxie, Abilities.chillingNeigh));
+        map.put(Abilities.unseenFist, Arrays.asList(Abilities.unseenFist, Abilities.piercingDrill));
 
         return map;
     }
 
     public static final List<Integer> uselessAbilities = Arrays.asList(Abilities.forecast, Abilities.multitype,
             Abilities.flowerGift, Abilities.zenMode, Abilities.stanceChange, Abilities.shieldsDown, Abilities.schooling,
-            Abilities.disguise, Abilities.battleBond, Abilities.powerConstruct, Abilities.rksSystem);
+            Abilities.disguise, Abilities.battleBond, Abilities.powerConstruct, Abilities.rksSystem,
+
+            // Expansion
+            Abilities.gulpMissile, Abilities.iceFace, Abilities.hungerSwitch, Abilities.zerotoHero, Abilities.commander,
+            Abilities.embodyAspectTeal, Abilities.embodyAspectHearthflame, Abilities.embodyAspectWellspring, Abilities.embodyAspectCornerstone,
+            Abilities.teraShift, Abilities.unused317, Abilities.unused318, Abilities.unused319);
 
     private static final String saveLoadFormeReversionPrefixSM = "00EB040094E50C1094E5F70E80E2", saveLoadFormeReversionPrefixUSUM = "00EB040094E50C1094E5030B80E2EE0F80E2";
     public static final String afterBattleFormeReversionPrefix = "0055E10B00001A0010A0E30700A0E1";
@@ -562,10 +666,13 @@ public class Gen7Constants {
 
         Map<Integer,String> basculinMap = new HashMap<>();
         basculinMap.put(1,"-B");
+        basculinMap.put(2,"-W");
         map.put(Species.basculin, basculinMap);
 
         Map<Integer,String> darmanitanMap = new HashMap<>();
         darmanitanMap.put(1,"-Z");
+        darmanitanMap.put(2,"-G");
+        darmanitanMap.put(3,"-G-Z");
         map.put(Species.darmanitan, darmanitanMap);
 
         Map<Integer,String> meloettaMap = new HashMap<>();
@@ -589,10 +696,6 @@ public class Gen7Constants {
         landorusMap.put(1,"-T");
         map.put(Species.landorus, landorusMap);
 
-        Map<Integer,String> meowsticMap = new HashMap<>();
-        meowsticMap.put(1,"-F");
-        map.put(Species.meowstic, meowsticMap);
-
         Map<Integer,String> aegislashMap = new HashMap<>();
         aegislashMap.put(1,"-B");
         map.put(Species.aegislash, aegislashMap);
@@ -609,10 +712,6 @@ public class Gen7Constants {
         gourgeistMap.put(3,"-XL");
         map.put(Species.gourgeist, gourgeistMap);
 
-        Map<Integer,String> floetteMap = new HashMap<>();
-        floetteMap.put(5,"-E");
-        map.put(Species.floette, floetteMap);
-
         Map<Integer,String> kyogreMap = new HashMap<>();
         kyogreMap.put(1,"-P");
         map.put(Species.kyogre, kyogreMap);
@@ -628,17 +727,6 @@ public class Gen7Constants {
         Map<Integer,String> hoopaMap = new HashMap<>();
         hoopaMap.put(1,"-U");
         map.put(Species.hoopa, hoopaMap);
-
-        for (Integer species: Gen6Constants.speciesToMegaStoneORAS.keySet()) {
-            Map<Integer,String> megaMap = new HashMap<>();
-            if (species == Species.charizard || species == Species.mewtwo) {
-                megaMap.put(1,"-Mega-X");
-                megaMap.put(2,"-Mega-Y");
-            } else {
-                megaMap.put(1,"-Mega");
-            }
-            map.put(species,megaMap);
-        }
 
         Map<Integer,String> wishiwashiMap = new HashMap<>();
         wishiwashiMap.put(1,"-S");
@@ -661,15 +749,6 @@ public class Gen7Constants {
             map.put(species, alolanMap);
         }
 
-        Map<Integer,String> greninjaMap = new HashMap<>();
-        greninjaMap.put(2,"-A");
-        map.put(Species.greninja, greninjaMap);
-
-        Map<Integer,String> zygardeMap = new HashMap<>();
-        zygardeMap.put(1,"-10");
-        zygardeMap.put(4,"-C");
-        map.put(Species.zygarde, zygardeMap);
-
         Map<Integer,String> miniorMap = new HashMap<>();
         miniorMap.put(7,"-C");
         map.put(Species.minior, miniorMap);
@@ -679,6 +758,160 @@ public class Gen7Constants {
         necrozmaMap.put(2,"-DW");
         necrozmaMap.put(3,"-U");
         map.put(Species.necrozma, necrozmaMap);
+
+        // Expansion
+        for (int species: speciesWithGalarianForms) {
+            Map<Integer,String> galarianMap = new HashMap<>();
+            galarianMap.put(1,"-G");
+            map.put(species, galarianMap);
+        }
+
+        for (int species: speciesWithHisuianForms) {
+            Map<Integer,String> hisuianMap = new HashMap<>();
+            hisuianMap.put(1,"-H");
+            map.put(species, hisuianMap);
+        }
+
+        for (int species: speciesWithPaldeanForms) {
+            Map<Integer,String> paldeanMap = new HashMap<>();
+            if (species == Species.tauros) {
+                paldeanMap.put(1,"-P-C");
+                paldeanMap.put(2,"-P-B");
+                paldeanMap.put(3,"-P-A");
+            } else {
+                paldeanMap.put(1,"-P");
+            }
+            map.put(species, paldeanMap);
+        }
+
+        for (Integer species: speciesToMegaStoneUSUM.keySet()) {
+            Map<Integer,String> megaMap = new HashMap<>();
+            if (species == Species.charizard || species == Species.mewtwo) {
+                megaMap.put(1,"-Mega-X");
+                megaMap.put(2,"-Mega-Y");
+            } else if (species == Species.raichu) {
+                megaMap.put(1,"-A");
+                megaMap.put(2,"-Mega-X");
+                megaMap.put(3,"-Mega-Y");
+            } else if (species == Species.slowbro) {
+                megaMap.put(1,"-Mega");
+                megaMap.put(2,"-G");
+            } else if (species == Species.absol || species == Species.garchomp || species == Species.lucario) {
+                megaMap.put(1,"-Mega");
+                megaMap.put(2,"-Mega-Z");
+            } else if (species == Species.greninja) {
+                megaMap.put(2,"-A");
+                megaMap.put(3,"-Mega");
+            } else if (species == Species.floette) {
+                megaMap.put(5,"-E");
+                megaMap.put(6,"-Mega");
+            } else if (species == Species.meowstic) {
+                megaMap.put(1,"-F");
+                megaMap.put(2,"-Mega");
+                megaMap.put(3,"-Mega-F");
+            } else if (species == Species.zygarde) {
+                megaMap.put(1,"-10");
+                megaMap.put(4,"-C");
+                megaMap.put(5,"-Mega");
+            } else if (species == Species.magearna) {
+                megaMap.put(2,"-Mega");
+            } else if (species == Species.tatsugiri) {
+                megaMap.put(3,"-Mega");
+            } else {
+                megaMap.put(1,"-Mega");
+            }
+            map.put(species,megaMap);
+        }
+
+        Map<Integer,String> meowthMap = new HashMap<>();
+        meowthMap.put(1,"-A");
+        meowthMap.put(2,"-G");
+        map.put(Species.meowth, meowthMap);
+
+        Map<Integer,String> dialgaMap = new HashMap<>();
+        dialgaMap.put(1,"-O");
+        map.put(Species.dialga, dialgaMap);
+
+        Map<Integer,String> palkiaMap = new HashMap<>();
+        palkiaMap.put(1,"-O");
+        map.put(Species.palkia, palkiaMap);
+
+        Map<Integer,String> cramorantMap = new HashMap<>();
+        cramorantMap.put(1,"-Gu");
+        cramorantMap.put(2,"-Go");
+        map.put(Species.cramorant, cramorantMap);
+
+        Map<Integer,String> toxtricityMap = new HashMap<>();
+        toxtricityMap.put(1,"-L");
+        map.put(Species.toxtricity, toxtricityMap);
+
+        Map<Integer,String> eiscueMap = new HashMap<>();
+        eiscueMap.put(1,"-N");
+        map.put(Species.eiscue, eiscueMap);
+
+        Map<Integer,String> indeedeeMap = new HashMap<>();
+        indeedeeMap.put(1,"-F");
+        map.put(Species.indeedee, indeedeeMap);
+
+        Map<Integer,String> morpekoMap = new HashMap<>();
+        morpekoMap.put(1,"-H");
+        map.put(Species.morpeko, morpekoMap);
+
+        Map<Integer,String> zacianMap = new HashMap<>();
+        zacianMap.put(1,"-C");
+        map.put(Species.zacian, zacianMap);
+
+        Map<Integer,String> zamazentaMap = new HashMap<>();
+        zamazentaMap.put(1,"-C");
+        map.put(Species.zamazenta, zamazentaMap);
+
+        Map<Integer,String> eternatusMap = new HashMap<>();
+        eternatusMap.put(1,"-E");
+        map.put(Species.eternatus, eternatusMap);
+
+        Map<Integer,String> urshifuMap = new HashMap<>();
+        urshifuMap.put(1,"-R");
+        map.put(Species.urshifu, urshifuMap);
+
+        Map<Integer,String> calyrexMap = new HashMap<>();
+        calyrexMap.put(1,"-I");
+        calyrexMap.put(2,"-S");
+        map.put(Species.calyrex, calyrexMap);
+
+        Map<Integer,String> ursalunaMap = new HashMap<>();
+        ursalunaMap.put(1,"-B");
+        map.put(Species.ursaluna, ursalunaMap);
+
+        Map<Integer,String> basculegionMap = new HashMap<>();
+        basculegionMap.put(1,"-F");
+        map.put(Species.basculegion, basculegionMap);
+
+        Map<Integer,String> enamorusMap = new HashMap<>();
+        enamorusMap.put(1,"-T");
+        map.put(Species.enamorus, enamorusMap);
+
+        Map<Integer,String> oinkologneMap = new HashMap<>();
+        oinkologneMap.put(1,"-F");
+        map.put(Species.oinkologne, oinkologneMap);
+
+        Map<Integer,String> palafinMap = new HashMap<>();
+        palafinMap.put(1,"-H");
+        map.put(Species.palafin, palafinMap);
+
+        Map<Integer,String> gimmighoulMap = new HashMap<>();
+        gimmighoulMap.put(1,"-R");
+        map.put(Species.gimmighoul, gimmighoulMap);
+
+        Map<Integer,String> ogerponMap = new HashMap<>();
+        ogerponMap.put(1,"-W");
+        ogerponMap.put(2,"-H");
+        ogerponMap.put(3,"-C");
+        map.put(Species.ogerpon, ogerponMap);
+
+        Map<Integer,String> terapagosMap = new HashMap<>();
+        terapagosMap.put(1,"-T");
+        terapagosMap.put(2,"-S");
+        map.put(Species.terapagos, terapagosMap);
 
         return map;
     }
@@ -760,7 +993,26 @@ public class Gen7Constants {
             Species.USUMFormes.pikachuCosmetic1, Species.USUMFormes.pikachuCosmetic2, Species.USUMFormes.pikachuCosmetic3,
             Species.USUMFormes.pikachuCosmetic4, Species.USUMFormes.pikachuCosmetic5, Species.USUMFormes.pikachuCosmetic6,
             Species.USUMFormes.pikachuCosmetic7, // Pikachu With Funny Hats
-            Species.USUMFormes.rockruffCosmetic1
+            Species.USUMFormes.rockruffCosmetic1,
+
+            // Expansion
+            Species.USUMFormes.pikachuCosmetic8,
+            Species.USUMFormes.magearnaMegaCosmetic1,
+            Species.USUMFormes.sinisteaCosmetic1,
+            Species.USUMFormes.polteageistCosmetic1,
+            Species.USUMFormes.alcremieCosmetic1, Species.USUMFormes.alcremieCosmetic2,
+            Species.USUMFormes.alcremieCosmetic3, Species.USUMFormes.alcremieCosmetic4,
+            Species.USUMFormes.alcremieCosmetic5, Species.USUMFormes.alcremieCosmetic6,
+            Species.USUMFormes.alcremieCosmetic7, Species.USUMFormes.alcremieCosmetic8,
+            Species.USUMFormes.zarudeCosmetic1,
+            Species.USUMFormes.mausholdCosmetic1,
+            Species.USUMFormes.squawkabillyCosmetic1, Species.USUMFormes.squawkabillyCosmetic2,
+            Species.USUMFormes.squawkabillyCosmetic3,
+            Species.USUMFormes.tatsugiriCosmetic1, Species.USUMFormes.tatsugiriCosmetic2,
+            Species.USUMFormes.tatsugiriMegaCosmetic1, Species.USUMFormes.tatsugiriMegaCosmetic2,
+            Species.USUMFormes.dudunsparceCosmetic1,
+            Species.USUMFormes.poltchageistCosmetic1,
+            Species.USUMFormes.sinistchaCosmetic1
     );
 
     public static List<Integer> getActuallyCosmeticForms(int romType) {
@@ -937,6 +1189,126 @@ public class Gen7Constants {
         return hardcodedTradeTextOffsets;
     }
 
+    public static final List<Integer> uniqueNoSellItems = Arrays.asList(Items.gengarite, Items.gardevoirite,
+            Items.ampharosite, Items.venusaurite, Items.charizarditeX, Items.blastoisinite, Items.mewtwoniteX,
+            Items.mewtwoniteY, Items.blazikenite, Items.medichamite, Items.houndoominite, Items.aggronite,
+            Items.banettite, Items.tyranitarite, Items.scizorite, Items.pinsirite, Items.aerodactylite,
+            Items.lucarionite, Items.abomasite, Items.kangaskhanite, Items.gyaradosite, Items.absolite,
+            Items.charizarditeY, Items.alakazite, Items.heracronite, Items.mawilite, Items.manectite, Items.garchompite,
+            Items.latiasite, Items.latiosite, Items.swampertite, Items.sceptilite, Items.sablenite, Items.altarianite,
+            Items.galladite, Items.audinite, Items.metagrossite, Items.sharpedonite, Items.slowbronite,
+            Items.steelixite, Items.pidgeotite, Items.glalitite, Items.diancite, Items.cameruptite, Items.lopunnite,
+            Items.salamencite, Items.beedrillite,
+
+            // Expansion
+            Items.raichuniteX, Items.raichuniteY, Items.clefablite, Items.victreebelite, Items.starminite, Items.dragoninite,
+            Items.meganiumite, Items.feraligite, Items.skarmorite, Items.froslassite, Items.emboarite, Items.excadrite,
+            Items.scolipite, Items.scraftinite, Items.eelektrossite, Items.chandelurite, Items.chesnaughtite, Items.delphoxite,
+            Items.pyroarite, Items.malamarite, Items.barbaracite, Items.dragalgite, Items.hawluchanite, Items.drampanite,
+            Items.falinksite, Items.chimechite, Items.staraptite, Items.heatranite, Items.darkranite);
+
+    private static Map<Integer,List<Integer>> setupSpeciesToMegaStone(int romType) {
+        Map<Integer,List<Integer>> map = new TreeMap<>();
+
+        map.put(Species.venusaur, Collections.singletonList(Items.venusaurite));
+        map.put(Species.charizard, Arrays.asList(Items.charizarditeX, Items.charizarditeY));
+        map.put(Species.blastoise, Collections.singletonList(Items.blastoisinite));
+        map.put(Species.alakazam, Collections.singletonList(Items.alakazite));
+        map.put(Species.gengar, Collections.singletonList(Items.gengarite));
+        map.put(Species.kangaskhan, Collections.singletonList(Items.kangaskhanite));
+        map.put(Species.pinsir, Collections.singletonList(Items.pinsirite));
+        map.put(Species.gyarados, Collections.singletonList(Items.gyaradosite));
+        map.put(Species.aerodactyl, Collections.singletonList(Items.aerodactylite));
+        map.put(Species.mewtwo, Arrays.asList(Items.mewtwoniteX, Items.mewtwoniteY));
+        map.put(Species.ampharos, Collections.singletonList(Items.ampharosite));
+        map.put(Species.scizor, Collections.singletonList(Items.scizorite));
+        map.put(Species.heracross, Collections.singletonList(Items.heracronite));
+        map.put(Species.houndoom, Collections.singletonList(Items.houndoominite));
+        map.put(Species.tyranitar, Collections.singletonList(Items.tyranitarite));
+        map.put(Species.blaziken, Collections.singletonList(Items.blazikenite));
+        map.put(Species.gardevoir, Collections.singletonList(Items.gardevoirite));
+        map.put(Species.mawile, Collections.singletonList(Items.mawilite));
+        map.put(Species.aggron, Collections.singletonList(Items.aggronite));
+        map.put(Species.medicham, Collections.singletonList(Items.medichamite));
+        map.put(Species.manectric, Collections.singletonList(Items.manectite));
+        map.put(Species.banette, Collections.singletonList(Items.banettite));
+        map.put(Species.latias, Collections.singletonList(Items.latiasite));
+        map.put(Species.latios, Collections.singletonList(Items.latiosite));
+        map.put(Species.abomasnow, Collections.singletonList(Items.abomasite));
+        map.put(Species.beedrill, Collections.singletonList(Items.beedrillite));
+        map.put(Species.pidgeot, Collections.singletonList(Items.pidgeotite));
+        map.put(Species.slowbro, Collections.singletonList(Items.slowbronite));
+        map.put(Species.steelix, Collections.singletonList(Items.steelixite));
+        map.put(Species.sceptile, Collections.singletonList(Items.sceptilite));
+        map.put(Species.swampert, Collections.singletonList(Items.swampertite));
+        map.put(Species.sableye, Collections.singletonList(Items.sablenite));
+        map.put(Species.sharpedo, Collections.singletonList(Items.sharpedonite));
+        map.put(Species.camerupt, Collections.singletonList(Items.cameruptite));
+        map.put(Species.altaria, Collections.singletonList(Items.altarianite));
+        map.put(Species.glalie, Collections.singletonList(Items.glalitite));
+        map.put(Species.salamence, Collections.singletonList(Items.salamencite));
+        map.put(Species.metagross, Collections.singletonList(Items.metagrossite));
+        map.put(Species.lopunny, Collections.singletonList(Items.lopunnite));
+        map.put(Species.gallade, Collections.singletonList(Items.galladite));
+        map.put(Species.audino, Collections.singletonList(Items.audinite));
+        map.put(Species.diancie, Collections.singletonList(Items.diancite));
+
+        if (romType == Type_SM) {
+            map.put(Species.absol, Collections.singletonList(Items.absolite));
+            map.put(Species.garchomp, Collections.singletonList(Items.garchompite));
+            map.put(Species.lucario, Collections.singletonList(Items.lucarionite));
+        }
+
+        else if (romType == Type_USUM) {
+            map.put(Species.clefable, Collections.singletonList(Items.clefablite));
+            map.put(Species.victreebel, Collections.singletonList(Items.victreebelite));
+            map.put(Species.starmie, Collections.singletonList(Items.starminite));
+            map.put(Species.dragonite, Collections.singletonList(Items.dragoninite));
+            map.put(Species.meganium, Collections.singletonList(Items.meganiumite));
+            map.put(Species.feraligatr, Collections.singletonList(Items.feraligite));
+            map.put(Species.skarmory, Collections.singletonList(Items.skarmorite));
+            map.put(Species.froslass, Collections.singletonList(Items.froslassite));
+            map.put(Species.heatran, Collections.singletonList(Items.heatranite));
+            map.put(Species.darkrai, Collections.singletonList(Items.darkranite));
+            map.put(Species.emboar, Collections.singletonList(Items.emboarite));
+            map.put(Species.excadrill, Collections.singletonList(Items.excadrite));
+            map.put(Species.scolipede, Collections.singletonList(Items.scolipite));
+            map.put(Species.scrafty, Collections.singletonList(Items.scraftinite));
+            map.put(Species.eelektross, Collections.singletonList(Items.eelektrossite));
+            map.put(Species.chandelure, Collections.singletonList(Items.chandelurite));
+            map.put(Species.chesnaught, Collections.singletonList(Items.chesnaughtite));
+            map.put(Species.delphox, Collections.singletonList(Items.delphoxite));
+            map.put(Species.greninja, Collections.singletonList(Items.none)); // not implemented: Greninjite
+            map.put(Species.pyroar, Collections.singletonList(Items.pyroarite));
+            map.put(Species.floette, Collections.singletonList(Items.none)); // not implemented: Floettite
+            map.put(Species.malamar, Collections.singletonList(Items.malamarite));
+            map.put(Species.barbaracle, Collections.singletonList(Items.barbaracite));
+            map.put(Species.dragalge, Collections.singletonList(Items.dragalgite));
+            map.put(Species.hawlucha, Collections.singletonList(Items.hawluchanite));
+            map.put(Species.zygarde, Collections.singletonList(Items.none)); // not implemented: Zygardite
+            map.put(Species.drampa, Collections.singletonList(Items.drampanite));
+            map.put(Species.zeraora, Collections.singletonList(Items.none)); // not implemented: Zeraorite
+            map.put(Species.falinks, Collections.singletonList(Items.falinksite));
+            map.put(Species.raichu, Arrays.asList(Items.raichuniteX, Items.raichuniteY));
+            map.put(Species.chimecho, Collections.singletonList(Items.chimechite));
+            map.put(Species.absol, Arrays.asList(Items.absolite, Items.none)); // not implemented: Absolite Z
+            map.put(Species.staraptor, Collections.singletonList(Items.staraptite));
+            map.put(Species.garchomp, Arrays.asList(Items.garchompite, Items.none)); // not implemented: Garchompite Z
+            map.put(Species.lucario, Arrays.asList(Items.lucarionite, Items.none)); // not implemented: Lucarionite Z
+            map.put(Species.golurk, Collections.singletonList(Items.none)); // not implemented: Golurkite
+            map.put(Species.meowstic, Arrays.asList(Items.none, Items.none)); // not implemented: Meowsticite
+            map.put(Species.crabominable, Collections.singletonList(Items.none)); // not implemented: Crabominite
+            map.put(Species.golisopod, Collections.singletonList(Items.none)); // not implemented: Golisopite
+            map.put(Species.magearna, Arrays.asList(Items.none, Items.none)); // not implemented: Magearnite
+            map.put(Species.scovillain, Collections.singletonList(Items.none)); // not implemented: Scovillainite
+            map.put(Species.baxcalibur, Collections.singletonList(Items.none)); // not implemented: Baxcalibrite
+            map.put(Species.tatsugiri, Arrays.asList(Items.none, Items.none, Items.none)); // not implemented: Tatsugirinite
+            map.put(Species.glimmora, Collections.singletonList(Items.none)); // not implemented: Glimmoranite
+        }
+
+        return map;
+    }
+
     public static ItemList allowedItemsSM, allowedItemsUSUM, nonBadItems;
     public static List<Integer> regularShopItemsSM, regularShopItemsUSUM, opShopItems;
 
@@ -996,7 +1368,8 @@ public class Gen7Constants {
         allowedItemsSM.banRange(Items.silverRazzBerry,18);
         allowedItemsSM.banRange(Items.stretchySpring,19);
 
-        allowedItemsUSUM = allowedItemsSM.copy(Items.rotoCatch);
+        // Expansion
+        allowedItemsUSUM = allowedItemsSM.copy(Items.gimmighoulCoin);
 
         // Z-Crystals
         allowedItemsUSUM.banRange(Items.solganiumZBag,12);
@@ -1006,6 +1379,9 @@ public class Gen7Constants {
 
         // ROTO LOTO
         allowedItemsUSUM.banRange(Items.rotoHatch,11);
+
+        // Expansion
+        allowedItemsUSUM.banSingles(Items.eternatusite);
 
         // non-bad items
         // ban specific pokemon hold items, berries, apricorns, mail

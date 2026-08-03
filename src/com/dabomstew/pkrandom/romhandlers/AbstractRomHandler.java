@@ -122,9 +122,16 @@ public abstract class AbstractRomHandler implements RomHandler {
                 addPokesFromRange(mainPokemonList, allPokemon, Species.chespin, Species.volcanion);
             }
 
-            int maxGen7SpeciesID = isSM ? Species.marshadow : Species.zeraora;
-            if (restrictions.allow_gen7 && allPokemon.size() > maxGen7SpeciesID) {
-                addPokesFromRange(mainPokemonList, allPokemon, Species.rowlet, maxGen7SpeciesID);
+            if (restrictions.allow_gen7 && allPokemon.size() > Species.melmetal) {
+                addPokesFromRange(mainPokemonList, allPokemon, Species.rowlet, Species.melmetal);
+            }
+
+            if (restrictions.allow_gen8 && allPokemon.size() > Species.enamorus) {
+                addPokesFromRange(mainPokemonList, allPokemon, Species.grookey, Species.enamorus);
+            }
+
+            if (restrictions.allow_gen9 && allPokemon.size() > Species.pecharunt) {
+                addPokesFromRange(mainPokemonList, allPokemon, Species.sprigatito, Species.pecharunt);
             }
 
             // If the user specified it, add all the evolutionary relatives for everything in the mainPokemonList

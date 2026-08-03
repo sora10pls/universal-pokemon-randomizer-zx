@@ -38,6 +38,8 @@ public class NewGenerationLimitDialog extends javax.swing.JDialog {
     private JCheckBox gen5CheckBox;
     private JCheckBox gen6CheckBox;
     private JCheckBox gen7CheckBox;
+    private JCheckBox gen8CheckBox;
+    private JCheckBox gen9CheckBox;
     private JButton okButton;
     private JButton cancelButton;
     private JPanel mainPanel;
@@ -76,6 +78,8 @@ public class NewGenerationLimitDialog extends javax.swing.JDialog {
         gr.allow_gen5 = gen5CheckBox.isSelected();
         gr.allow_gen6 = gen6CheckBox.isSelected();
         gr.allow_gen7 = gen7CheckBox.isSelected();
+        gr.allow_gen8 = gen8CheckBox.isSelected();
+        gr.allow_gen9 = gen9CheckBox.isSelected();
         gr.allow_evolutionary_relatives = allowEvolutionaryRelativesCheckBox.isSelected();
         return gr;
     }
@@ -112,6 +116,8 @@ public class NewGenerationLimitDialog extends javax.swing.JDialog {
         gen5CheckBox.setSelected(restrict.allow_gen5);
         gen6CheckBox.setSelected(restrict.allow_gen6);
         gen7CheckBox.setSelected(restrict.allow_gen7);
+        gen8CheckBox.setSelected(restrict.allow_gen8);
+        gen9CheckBox.setSelected(restrict.allow_gen9);
         allowEvolutionaryRelativesCheckBox.setSelected(restrict.allow_evolutionary_relatives);
     }
 
@@ -126,6 +132,8 @@ public class NewGenerationLimitDialog extends javax.swing.JDialog {
         gen5CheckBox.addActionListener(ev -> enableAndDisableBoxes());
         gen6CheckBox.addActionListener(ev -> enableAndDisableBoxes());
         gen7CheckBox.addActionListener(ev -> enableAndDisableBoxes());
+        gen8CheckBox.addActionListener(ev -> enableAndDisableBoxes());
+        gen9CheckBox.addActionListener(ev -> enableAndDisableBoxes());
         allowEvolutionaryRelativesCheckBox.addActionListener(ev -> enableAndDisableBoxes());
         okButton.addActionListener(evt -> okButtonActionPerformed());
         cancelButton.addActionListener(evt -> cancelButtonActionPerformed());
@@ -149,7 +157,7 @@ public class NewGenerationLimitDialog extends javax.swing.JDialog {
 
         if (gen1CheckBox.isSelected() || gen2CheckBox.isSelected() || gen3CheckBox.isSelected() ||
                 gen4CheckBox.isSelected() || gen5CheckBox.isSelected() || gen6CheckBox.isSelected() ||
-                gen7CheckBox.isSelected()) {
+                gen7CheckBox.isSelected() || gen8CheckBox.isSelected() || gen9CheckBox.isSelected()) {
             allowEvolutionaryRelativesCheckBox.setEnabled(true);
         } else {
             allowEvolutionaryRelativesCheckBox.setEnabled(false);
