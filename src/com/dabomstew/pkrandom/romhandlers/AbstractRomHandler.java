@@ -3477,6 +3477,14 @@ public abstract class AbstractRomHandler implements RomHandler {
             }
 
             if (pkmn.actuallyCosmetic) {
+                if (pkmn.number == Species.USUMFormes.tatsugiriMegaCosmetic1 || pkmn.number == Species.USUMFormes.tatsugiriMegaCosmetic2) {
+                    moves.remove(moves.size() - 1); // Mega Tatsugiri has 1 more move than its base form
+                }
+                if (pkmn.number == Species.USUMFormes.pikachuCosmetic8) {
+                    for (int i = 0; i < 2; i++) {
+                        moves.remove(moves.size() - 1); // World Cap Pikachu has 2 more moves than its other counterparts
+                    }
+                }
                 for (int i = 0; i < moves.size(); i++) {
                     moves.get(i).move = movesets.get(pkmn.baseForme.number).get(i).move;
                 }
