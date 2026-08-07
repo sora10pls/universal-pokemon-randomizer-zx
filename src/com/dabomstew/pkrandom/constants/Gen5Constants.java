@@ -835,7 +835,7 @@ public class Gen5Constants {
         allowedItems = new ItemList(Items.revealGlass);
         // Key items + version exclusives
         allowedItems.banRange(Items.explorerKit, 76);
-        allowedItems.banRange(Items.dataCard01, 32);
+        allowedItems.banRange(Items.golurkite, 32);
         allowedItems.banRange(Items.xtransceiverMale, 18);
         allowedItems.banSingles(Items.libertyPass, Items.propCase, Items.dragonSkull, Items.lightStone, Items.darkStone);
         // Unknown blank items or version exclusives
@@ -1402,22 +1402,6 @@ public class Gen5Constants {
             {Items.gbSounds, 0},
             {Items.tidalBell, 0},
             {Items.rageCandyBar, 1500},
-            {Items.dataCard01, 0},
-            {Items.dataCard02, 0},
-            {Items.dataCard03, 0},
-            {Items.dataCard04, 0},
-            {Items.dataCard05, 0},
-            {Items.dataCard06, 0},
-            {Items.dataCard07, 0},
-            {Items.dataCard08, 0},
-            {Items.dataCard09, 0},
-            {Items.dataCard10, 0},
-            {Items.dataCard11, 0},
-            {Items.dataCard12, 0},
-            {Items.dataCard13, 0},
-            {Items.dataCard14, 0},
-            {Items.dataCard15, 0},
-            {Items.dataCard16, 0},
             {Items.dataCard17, 0},
             {Items.dataCard18, 0},
             {Items.dataCard19, 0},

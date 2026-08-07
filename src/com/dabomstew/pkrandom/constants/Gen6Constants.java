@@ -909,7 +909,7 @@ public class Gen6Constants {
         allowedItemsXY = new ItemList(Items.megaGlove);
         // Key items + version exclusives
         allowedItemsXY.banRange(Items.explorerKit, 76);
-        allowedItemsXY.banRange(Items.dataCard01, 32);
+        allowedItemsXY.banRange(Items.golurkite, 32);
         allowedItemsXY.banRange(Items.xtransceiverMale, 18);
         allowedItemsXY.banSingles(Items.expShare, Items.libertyPass, Items.propCase, Items.dragonSkull,
                 Items.lightStone, Items.darkStone);
@@ -1768,22 +1768,6 @@ public class Gen6Constants {
             {Items.gbSounds, 0},
             {Items.tidalBell, 0},
             {Items.rageCandyBar, 15},
-            {Items.dataCard01, 0},
-            {Items.dataCard02, 0},
-            {Items.dataCard03, 0},
-            {Items.dataCard04, 0},
-            {Items.dataCard05, 0},
-            {Items.dataCard06, 0},
-            {Items.dataCard07, 0},
-            {Items.dataCard08, 0},
-            {Items.dataCard09, 0},
-            {Items.dataCard10, 0},
-            {Items.dataCard11, 0},
-            {Items.dataCard12, 0},
-            {Items.dataCard13, 0},
-            {Items.dataCard14, 0},
-            {Items.dataCard15, 0},
-            {Items.dataCard16, 0},
             {Items.dataCard17, 0},
             {Items.dataCard18, 0},
             {Items.dataCard19, 0},

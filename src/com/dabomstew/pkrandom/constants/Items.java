@@ -544,22 +544,25 @@ public class Items {
     public static final int gbSounds = 502;
     public static final int tidalBell = 503;
     public static final int rageCandyBar = 504;
-    public static final int dataCard01 = 505;
-    public static final int dataCard02 = 506;
-    public static final int dataCard03 = 507;
-    public static final int dataCard04 = 508;
-    public static final int dataCard05 = 509;
-    public static final int dataCard06 = 510;
-    public static final int dataCard07 = 511;
-    public static final int dataCard08 = 512;
-    public static final int dataCard09 = 513;
-    public static final int dataCard10 = 514;
-    public static final int dataCard11 = 515;
-    public static final int dataCard12 = 516;
-    public static final int dataCard13 = 517;
-    public static final int dataCard14 = 518;
-    public static final int dataCard15 = 519;
-    public static final int dataCard16 = 520;
+
+    // Expansion
+    public static final int golurkite = 505;
+    public static final int crabominite = 506;
+    public static final int golisopite = 507;
+    public static final int zeraorite = 508;
+    public static final int scovillainite = 509;
+    public static final int baxcalibrite = 510;
+    public static final int glimmoranite = 511;
+    public static final int absoliteZ = 512;
+    public static final int garchompiteZ = 513;
+    public static final int lucarioniteZ = 514;
+    public static final int greninjite = 515;
+    public static final int floettite = 516;
+    public static final int zygardite = 517;
+    public static final int meowsticite = 518;
+    public static final int magearnite = 519;
+    public static final int tatsugirinite = 520;
+    
     public static final int dataCard17 = 521;
     public static final int dataCard18 = 522;
     public static final int dataCard19 = 523;

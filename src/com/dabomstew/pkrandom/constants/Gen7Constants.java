@@ -1201,6 +1201,9 @@ public class Gen7Constants {
             Items.salamencite, Items.beedrillite,
 
             // Expansion
+            Items.golurkite, Items.crabominite, Items.golisopite, Items.zeraorite, Items.scovillainite,
+            Items.baxcalibrite, Items.glimmoranite, Items.absoliteZ, Items.garchompiteZ, Items.lucarioniteZ,
+            Items.greninjite, Items.floettite, Items.zygardite, Items.meowsticite, Items.magearnite, Items.tatsugirinite,
             Items.raichuniteX, Items.raichuniteY, Items.clefablite, Items.victreebelite, Items.starminite, Items.dragoninite,
             Items.meganiumite, Items.feraligite, Items.skarmorite, Items.froslassite, Items.emboarite, Items.excadrite,
             Items.scolipite, Items.scraftinite, Items.eelektrossite, Items.chandelurite, Items.chesnaughtite, Items.delphoxite,
@@ -1278,32 +1281,32 @@ public class Gen7Constants {
             map.put(Species.chandelure, Collections.singletonList(Items.chandelurite));
             map.put(Species.chesnaught, Collections.singletonList(Items.chesnaughtite));
             map.put(Species.delphox, Collections.singletonList(Items.delphoxite));
-            map.put(Species.greninja, Collections.singletonList(Items.none)); // not implemented: Greninjite
+            map.put(Species.greninja, Collections.singletonList(Items.greninjite));
             map.put(Species.pyroar, Collections.singletonList(Items.pyroarite));
-            map.put(Species.floette, Collections.singletonList(Items.none)); // not implemented: Floettite
+            map.put(Species.floette, Collections.singletonList(Items.floettite));
             map.put(Species.malamar, Collections.singletonList(Items.malamarite));
             map.put(Species.barbaracle, Collections.singletonList(Items.barbaracite));
             map.put(Species.dragalge, Collections.singletonList(Items.dragalgite));
             map.put(Species.hawlucha, Collections.singletonList(Items.hawluchanite));
-            map.put(Species.zygarde, Collections.singletonList(Items.none)); // not implemented: Zygardite
+            map.put(Species.zygarde, Collections.singletonList(Items.zygardite));
             map.put(Species.drampa, Collections.singletonList(Items.drampanite));
-            map.put(Species.zeraora, Collections.singletonList(Items.none)); // not implemented: Zeraorite
+            map.put(Species.zeraora, Collections.singletonList(Items.zeraorite));
             map.put(Species.falinks, Collections.singletonList(Items.falinksite));
             map.put(Species.raichu, Arrays.asList(Items.raichuniteX, Items.raichuniteY));
             map.put(Species.chimecho, Collections.singletonList(Items.chimechite));
-            map.put(Species.absol, Arrays.asList(Items.absolite, Items.none)); // not implemented: Absolite Z
+            map.put(Species.absol, Arrays.asList(Items.absolite, Items.absoliteZ));
             map.put(Species.staraptor, Collections.singletonList(Items.staraptite));
-            map.put(Species.garchomp, Arrays.asList(Items.garchompite, Items.none)); // not implemented: Garchompite Z
-            map.put(Species.lucario, Arrays.asList(Items.lucarionite, Items.none)); // not implemented: Lucarionite Z
-            map.put(Species.golurk, Collections.singletonList(Items.none)); // not implemented: Golurkite
-            map.put(Species.meowstic, Arrays.asList(Items.none, Items.none)); // not implemented: Meowsticite
-            map.put(Species.crabominable, Collections.singletonList(Items.none)); // not implemented: Crabominite
-            map.put(Species.golisopod, Collections.singletonList(Items.none)); // not implemented: Golisopite
-            map.put(Species.magearna, Arrays.asList(Items.none, Items.none)); // not implemented: Magearnite
-            map.put(Species.scovillain, Collections.singletonList(Items.none)); // not implemented: Scovillainite
-            map.put(Species.baxcalibur, Collections.singletonList(Items.none)); // not implemented: Baxcalibrite
-            map.put(Species.tatsugiri, Arrays.asList(Items.none, Items.none, Items.none)); // not implemented: Tatsugirinite
-            map.put(Species.glimmora, Collections.singletonList(Items.none)); // not implemented: Glimmoranite
+            map.put(Species.garchomp, Arrays.asList(Items.garchompite, Items.garchompiteZ));
+            map.put(Species.lucario, Arrays.asList(Items.lucarionite, Items.lucarioniteZ));
+            map.put(Species.golurk, Collections.singletonList(Items.golurkite));
+            map.put(Species.meowstic, Arrays.asList(Items.none, Items.meowsticite));
+            map.put(Species.crabominable, Collections.singletonList(Items.crabominite));
+            map.put(Species.golisopod, Collections.singletonList(Items.golisopite));
+            map.put(Species.magearna, Arrays.asList(Items.none, Items.magearnite));
+            map.put(Species.scovillain, Collections.singletonList(Items.scovillainite));
+            map.put(Species.baxcalibur, Collections.singletonList(Items.baxcalibrite));
+            map.put(Species.tatsugiri, Arrays.asList(Items.none, Items.none, Items.tatsugirinite));
+            map.put(Species.glimmora, Collections.singletonList(Items.glimmoranite));
         }
 
         return map;
@@ -1320,7 +1323,7 @@ public class Gen7Constants {
         allowedItemsSM = new ItemList(Items.fairyMemory);
         // Key items + version exclusives
         allowedItemsSM.banRange(Items.explorerKit, 76);
-        allowedItemsSM.banRange(Items.dataCard01, 32);
+        allowedItemsSM.banRange(Items.golurkite, 32);
         allowedItemsSM.banRange(Items.xtransceiverMale, 18);
         allowedItemsSM.banSingles(Items.expShare, Items.libertyPass, Items.propCase, Items.dragonSkull,
                 Items.lightStone, Items.darkStone);
@@ -2160,22 +2163,6 @@ public class Gen7Constants {
             {Items.gbSounds, 0},
             {Items.tidalBell, 0},
             {Items.rageCandyBar, 35},
-            {Items.dataCard01, 0},
-            {Items.dataCard02, 0},
-            {Items.dataCard03, 0},
-            {Items.dataCard04, 0},
-            {Items.dataCard05, 0},
-            {Items.dataCard06, 0},
-            {Items.dataCard07, 0},
-            {Items.dataCard08, 0},
-            {Items.dataCard09, 0},
-            {Items.dataCard10, 0},
-            {Items.dataCard11, 0},
-            {Items.dataCard12, 0},
-            {Items.dataCard13, 0},
-            {Items.dataCard14, 0},
-            {Items.dataCard15, 0},
-            {Items.dataCard16, 0},
             {Items.dataCard17, 0},
             {Items.dataCard18, 0},
             {Items.dataCard19, 0},
@@ -2617,6 +2604,22 @@ public class Gen7Constants {
             {Items.rotoCatch, 0},
 
             // Expansion
+            {Items.golurkite, 500},
+            {Items.crabominite, 500},
+            {Items.golisopite, 500},
+            {Items.zeraorite, 2000},
+            {Items.scovillainite, 500},
+            {Items.baxcalibrite, 1000},
+            {Items.glimmoranite, 500},
+            {Items.absoliteZ, 1000},
+            {Items.garchompiteZ, 1000},
+            {Items.lucarioniteZ, 1000},
+            {Items.greninjite, 1000},
+            {Items.floettite, 2000},
+            {Items.zygardite, 2000},
+            {Items.meowsticite, 500},
+            {Items.magearnite, 2000},
+            {Items.tatsugirinite, 500},
             {Items.boosterEnergy, 1000},
             {Items.eternatusite, 2000},
             {Items.teraCrystal, 1000},
