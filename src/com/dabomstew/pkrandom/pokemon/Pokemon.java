@@ -291,12 +291,23 @@ public class Pokemon implements Comparable<Pokemon> {
             Species.meloetta, Species.genesect, Species.xerneas, Species.yveltal, Species.zygarde, Species.diancie,
             Species.hoopa, Species.volcanion, Species.typeNull, Species.silvally, Species.tapuKoko, Species.tapuLele,
             Species.tapuBulu, Species.tapuFini, Species.cosmog, Species.cosmoem, Species.solgaleo, Species.lunala,
-            Species.necrozma, Species.magearna, Species.marshadow, Species.zeraora);
+            Species.necrozma, Species.magearna, Species.marshadow, Species.zeraora,
+
+            // Expansion
+            Species.meltan, Species.melmetal, Species.zacian, Species.zamazenta, Species.eternatus, Species.kubfu,
+            Species.urshifu, Species.zarude, Species.regieleki, Species.regidrago, Species.glastrier, Species.spectrier,
+            Species.calyrex, Species.enamorus, Species.woChien, Species.chienPao, Species.tingLu, Species.chiYu,
+            Species.koraidon, Species.miraidon, Species.walkingWake, Species.ironLeaves, Species.okidogi, Species.munkidori,
+            Species.fezandipiti, Species.ogerpon, Species.gougingFire, Species.ragingBolt, Species.ironBoulder, Species.ironCrown,
+            Species.terapagos, Species.pecharunt);
 
     private static final List<Integer> strongLegendaries = Arrays.asList(Species.mewtwo, Species.lugia, Species.hoOh,
             Species.kyogre, Species.groudon, Species.rayquaza, Species.dialga, Species.palkia, Species.regigigas,
             Species.giratina, Species.arceus, Species.reshiram, Species.zekrom, Species.kyurem, Species.xerneas,
-            Species.yveltal, Species.cosmog, Species.cosmoem, Species.solgaleo, Species.lunala);
+            Species.yveltal, Species.cosmog, Species.cosmoem, Species.solgaleo, Species.lunala,
+
+            // Expansion
+            Species.zacian, Species.zamazenta, Species.eternatus, Species.koraidon, Species.miraidon);
 
     private static final List<Integer> ultraBeasts = Arrays.asList(Species.nihilego, Species.buzzwole, Species.pheromosa,
             Species.xurkitree, Species.celesteela, Species.kartana, Species.guzzlord, Species.poipole, Species.naganadel,

@@ -81,7 +81,7 @@ public class GlobalConstants {
             Moves.scaleShot, Moves.populationBomb);
 
     public static final List<Integer> doubleHitMoves = Arrays.asList(
-            Moves.bonemerang, Moves.doubleHit, Moves.doubleIronBash, Moves.doubleKick, Moves.dragonDarts,
+            Moves.bonemerang, Moves.doubleHit, Moves.doubleKick,
             Moves.dualChop, Moves.gearGrind, Moves.twineedle,
 
             // Expansion
@@ -266,6 +266,6 @@ public class GlobalConstants {
 
     public static final int HIGHEST_POKEMON_GEN = 9;
 
-    // Milcery has 9 potential evolutions
-    public static final int LARGEST_NUMBER_OF_SPLIT_EVOS = 9;
+    // Eevee has 8 potential evolutions
+    public static final int LARGEST_NUMBER_OF_SPLIT_EVOS = 8;
 }
