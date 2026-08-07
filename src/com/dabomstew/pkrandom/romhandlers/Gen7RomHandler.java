@@ -622,6 +622,236 @@ public class Gen7RomHandler extends Abstract3DSRomHandler {
                         }
                     }
                 }
+
+                // Expansion: add missing evolution methods, to be removed when they are added to the mod proper
+                if (pk.number == Species.primeape) {
+                    Evolution evo = new Evolution(pk, pokes[Species.annihilape], false, EvolutionType.LEVEL_WITH_MOVE, Moves.rageFist);
+                    evo.forme = -1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.girafarig) {
+                    Evolution evo = new Evolution(pk, pokes[Species.farigiraf], false, EvolutionType.LEVEL_WITH_MOVE, Moves.twinBeam);
+                    evo.forme = -1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.dunsparce) {
+                    Evolution evo = new Evolution(pk, pokes[Species.dudunsparce], false, EvolutionType.LEVEL_HIGH_PV, 32);
+                    evo.forme = 0;
+                    evo.level = 32;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.dunsparce) {
+                    Evolution evo = new Evolution(pk, pokes[Species.dudunsparce], false, EvolutionType.LEVEL_LOW_PV, 32);
+                    evo.forme = 1;
+                    evo.level = 32;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.stantler) {
+                    Evolution evo = new Evolution(pk, pokes[Species.wyrdeer], false, EvolutionType.LEVEL_WITH_MOVE, Moves.psyshieldBash);
+                    evo.forme = -1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.meltan) {
+                    Evolution evo = new Evolution(pk, pokes[Species.melmetal], false, EvolutionType.LEVEL, 40);
+                    evo.forme = -1;
+                    evo.level = 40;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.toxel) {
+                    Evolution evo = new Evolution(pk, pokes[Species.toxtricity], false, EvolutionType.LEVEL_HIGH_PV, 30);
+                    evo.forme = 0;
+                    evo.level = 30;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.toxel) {
+                    Evolution evo = new Evolution(pk, pokes[Species.toxtricity], false, EvolutionType.LEVEL_LOW_PV, 30);
+                    evo.forme = 1;
+                    evo.level = 30;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.clobbopus) {
+                    Evolution evo = new Evolution(pk, pokes[Species.grapploct], false, EvolutionType.LEVEL_WITH_MOVE, Moves.taunt);
+                    evo.forme = -1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.snom) {
+                    Evolution evo = new Evolution(pk, pokes[Species.frosmoth], false, EvolutionType.HAPPINESS_NIGHT, 0);
+                    evo.forme = -1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.duraludon) {
+                    Evolution evo = new Evolution(pk, pokes[Species.archaludon], false, EvolutionType.LEVEL, 35);
+                    evo.forme = -1;
+                    evo.level = 35;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.lechonk) {
+                    Evolution evo = new Evolution(pk, pokes[Species.oinkologne], false, EvolutionType.LEVEL_MALE_ONLY, 18);
+                    evo.forme = 0;
+                    evo.level = 18;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.lechonk) {
+                    Evolution evo = new Evolution(pk, pokes[Species.oinkologne], false, EvolutionType.LEVEL_FEMALE_ONLY, 18);
+                    evo.forme = 1;
+                    evo.level = 18;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.pawmo) {
+                    Evolution evo = new Evolution(pk, pokes[Species.pawmot], false, EvolutionType.LEVEL, 25);
+                    evo.forme = -1;
+                    evo.level = 25;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.tandemaus) {
+                    Evolution evo = new Evolution(pk, pokes[Species.maushold], false, EvolutionType.LEVEL_HIGH_PV, 25);
+                    evo.forme = 0;
+                    evo.level = 25;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.tandemaus) {
+                    Evolution evo = new Evolution(pk, pokes[Species.maushold], false, EvolutionType.LEVEL_LOW_PV, 25);
+                    evo.forme = 1;
+                    evo.level = 25;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.tadbulb) {
+                    Evolution evo = new Evolution(pk, pokes[Species.bellibolt], false, EvolutionType.STONE, Items.thunderStone);
+                    evo.forme = -1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.bramblin) {
+                    Evolution evo = new Evolution(pk, pokes[Species.brambleghast], false, EvolutionType.LEVEL, 25);
+                    evo.forme = -1;
+                    evo.level = 25;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.capsakid) {
+                    Evolution evo = new Evolution(pk, pokes[Species.scovillain], false, EvolutionType.STONE, Items.fireStone);
+                    evo.forme = -1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.rellor) {
+                    Evolution evo = new Evolution(pk, pokes[Species.rabsca], false, EvolutionType.LEVEL, 25);
+                    evo.forme = -1;
+                    evo.level = 25;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.finizen) {
+                    Evolution evo = new Evolution(pk, pokes[Species.palafin], false, EvolutionType.LEVEL, 38);
+                    evo.forme = -1;
+                    evo.level = 38;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.greavard) {
+                    Evolution evo = new Evolution(pk, pokes[Species.houndstone], false, EvolutionType.LEVEL_NIGHT, 30);
+                    evo.forme = -1;
+                    evo.level = 30;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.cetoddle) {
+                    Evolution evo = new Evolution(pk, pokes[Species.cetitan], false, EvolutionType.STONE, Items.iceStone);
+                    evo.forme = -1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.dipplin) {
+                    Evolution evo = new Evolution(pk, pokes[Species.hydrapple], false, EvolutionType.LEVEL_WITH_MOVE, Moves.dragonCheer);
+                    evo.forme = -1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.growlitheH) {
+                    Evolution evo = new Evolution(pk, pokes[Species.arcanine], false, EvolutionType.STONE, Items.fireStone);
+                    evo.forme = 1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.ponytaG) {
+                    Evolution evo = new Evolution(pk, pokes[Species.rapidash], false, EvolutionType.LEVEL, 40);
+                    evo.forme = 1;
+                    evo.level = 40;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.farfetchdG) {
+                    Evolution evo = new Evolution(pk, pokes[Species.sirfetchd], false, EvolutionType.LEVEL, 25);
+                    evo.forme = 0;
+                    evo.level = 25;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.voltorbH) {
+                    Evolution evo = new Evolution(pk, pokes[Species.electrode], false, EvolutionType.STONE, Items.leafStone);
+                    evo.forme = 1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.qwilfishH) {
+                    Evolution evo = new Evolution(pk, pokes[Species.overqwil], false, EvolutionType.LEVEL_WITH_MOVE, Moves.barbBarrage);
+                    evo.forme = 0;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.sneaselH) {
+                    Evolution evo = new Evolution(pk, pokes[Species.sneasler], false, EvolutionType.LEVEL_ITEM_DAY, Items.razorClaw);
+                    evo.forme = 0;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.zigzagoonG) {
+                    Evolution evo = new Evolution(pk, pokes[Species.linoone], false, EvolutionType.LEVEL, 20);
+                    evo.forme = 1;
+                    evo.level = 20;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.linooneG) {
+                    Evolution evo = new Evolution(pk, pokes[Species.obstagoon], false, EvolutionType.LEVEL_NIGHT, 35);
+                    evo.forme = 0;
+                    evo.level = 35;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.basculinW) {
+                    Evolution evo = new Evolution(pk, pokes[Species.basculegion], false, EvolutionType.LEVEL_MALE_ONLY, 30);
+                    evo.forme = 0;
+                    evo.level = 30;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.basculinW) {
+                    Evolution evo = new Evolution(pk, pokes[Species.basculegion], false, EvolutionType.LEVEL_FEMALE_ONLY, 30);
+                    evo.forme = 1;
+                    evo.level = 30;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.darumakaG) {
+                    Evolution evo = new Evolution(pk, pokes[Species.darmanitan], false, EvolutionType.STONE, Items.iceStone);
+                    evo.forme = 2;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.yamaskG) {
+                    Evolution evo = new Evolution(pk, pokes[Species.runerigus], false, EvolutionType.LEVEL, 30);
+                    evo.forme = 0;
+                    evo.level = 30;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.zoruaH) {
+                    Evolution evo = new Evolution(pk, pokes[Species.zoroark], false, EvolutionType.LEVEL, 30);
+                    evo.forme = 1;
+                    evo.level = 30;
+                    pk.evolutionsFrom.add(evo);
+                }
+                if (pk.number == Species.USUMFormes.sliggooH) {
+                    Evolution evo = new Evolution(pk, pokes[Species.goodra], false, EvolutionType.LEVEL_RAIN, 0);
+                    evo.forme = 1;
+                    evo.level = 0;
+                    pk.evolutionsFrom.add(evo);
+                }
             }
         } catch (IOException e) {
             throw new RandomizerIOException(e);
