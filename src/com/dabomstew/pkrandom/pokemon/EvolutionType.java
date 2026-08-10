@@ -107,6 +107,6 @@ public enum EvolutionType {
     }
 
     public boolean skipSplitEvo() {
-        return (this == LEVEL_HIGH_BEAUTY) || (this == LEVEL_NIGHT_ULTRA) || (this == STONE_ULTRA);
+        return this == LEVEL_HIGH_BEAUTY;
     }
 }
