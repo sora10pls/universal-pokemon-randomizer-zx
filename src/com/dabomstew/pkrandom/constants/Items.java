@@ -1040,7 +1040,7 @@ public class Items {
     public static final int cloverSweet = 981;
     public static final int flowerSweet = 982;
     public static final int ribbonSweet = 983;
-    public static final int darknessScroll = 984;
+    public static final int scrollofDarkness = 984;
     public static final int scrollofWaters = 985;
     public static final int blackAugurite = 986;
     public static final int peatBlock = 987;
@@ -1048,8 +1048,8 @@ public class Items {
     public static final int maliciousArmor = 989;
     public static final int leadersCrest = 990;
     public static final int syrupyApple = 991;
-    public static final int unremarkableCup = 992;
-    public static final int masterpieceCup = 993;
+    public static final int unremarkableTeacup = 992;
+    public static final int masterpieceTeacup = 993;
     public static final int gimmighoulCoin = 994;
     public static final int raichuniteX = 995;
     public static final int raichuniteY = 996;

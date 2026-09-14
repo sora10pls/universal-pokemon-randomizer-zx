@@ -927,7 +927,7 @@ public class Randomizer {
                 abSpFormat = "%-17s";
             }
 
-            log.print("NUM |NAME" + nameSp + "|TYPE             |  HP| ATK| DEF|SATK|SDEF| SPD");
+            log.print("NUM |NAME" + nameSp + "|TYPE              |  HP| ATK| DEF|SATK|SDEF| SPD");
             int abils = romHandler.abilitiesPerPokemon();
             for (int i = 0; i < abils; i++) {
                 log.print("|ABILITY" + (i + 1) + abSp);

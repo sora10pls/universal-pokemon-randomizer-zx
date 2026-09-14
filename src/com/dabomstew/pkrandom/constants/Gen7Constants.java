@@ -41,7 +41,7 @@ public class Gen7Constants {
     private static final int pokemonCountSM = 802, pokemonCountUSUM = 1025; // Expansion: up from 807
     private static final int formeCountSM = 158, formeCountUSUM = 304; // Expansion: up from 168
     private static final int moveCountSM = 719, moveCountUSUM = 920; // Expansion: up from 728
-    private static final int highestAbilityIndexSM = Abilities.prismArmor, highestAbilityIndexUSUM = Abilities.fireMane; // Expansion: up from Neuroforce
+    private static final int highestAbilityIndexSM = Abilities.prismArmor, highestAbilityIndexUSUM = Abilities.auraGuard; // Expansion: up from Neuroforce
 
     public static final Map<Integer,List<Integer>> speciesToMegaStoneSM = setupSpeciesToMegaStone(Type_SM);
     public static final Map<Integer,List<Integer>> speciesToMegaStoneUSUM = setupSpeciesToMegaStone(Type_USUM);
@@ -345,8 +345,8 @@ public class Gen7Constants {
             // Expansion
             Items.galaricaCuff, Items.galaricaWreath, Items.tartApple, Items.sweetApple, Items.crackedPot, Items.chippedPot,
             Items.strawberrySweet, Items.berrySweet, Items.loveSweet, Items.starSweet, Items.cloverSweet, Items.flowerSweet, Items.ribbonSweet,
-            Items.darknessScroll, Items.scrollofWaters, Items.blackAugurite, Items.peatBlock, Items.auspiciousArmor, Items.maliciousArmor,
-            Items.leadersCrest, Items.syrupyApple, Items.unremarkableCup, Items.masterpieceCup, Items.gimmighoulCoin);
+            Items.scrollofDarkness, Items.scrollofWaters, Items.blackAugurite, Items.peatBlock, Items.auspiciousArmor, Items.maliciousArmor,
+            Items.leadersCrest, Items.syrupyApple, Items.unremarkableTeacup, Items.masterpieceTeacup, Items.gimmighoulCoin);
 
     private static final List<Boolean> relevantEncounterFilesSM = setupRelevantEncounterFiles(Type_SM);
     private static final List<Boolean> relevantEncounterFilesUSUM = setupRelevantEncounterFiles(Type_USUM);
@@ -406,7 +406,7 @@ public class Gen7Constants {
             // Expansion
             Abilities.gulpMissile, Abilities.iceFace, Abilities.hungerSwitch, Abilities.zerotoHero, Abilities.commander,
             Abilities.embodyAspectTeal, Abilities.embodyAspectHearthflame, Abilities.embodyAspectWellspring, Abilities.embodyAspectCornerstone,
-            Abilities.teraShift, Abilities.unused317, Abilities.unused318, Abilities.unused319);
+            Abilities.teraShift, Abilities.unused317, Abilities.unused318);
 
     private static final String saveLoadFormeReversionPrefixSM = "00EB040094E50C1094E5F70E80E2", saveLoadFormeReversionPrefixUSUM = "00EB040094E50C1094E5030B80E2EE0F80E2";
     public static final String afterBattleFormeReversionPrefix = "0055E10B00001A0010A0E30700A0E1";
@@ -2644,7 +2644,7 @@ public class Gen7Constants {
             {Items.cloverSweet, 300},
             {Items.flowerSweet, 300},
             {Items.ribbonSweet, 300},
-            {Items.darknessScroll, 1000},
+            {Items.scrollofDarkness, 1000},
             {Items.scrollofWaters, 1000},
             {Items.blackAugurite, 300},
             {Items.peatBlock, 300},
@@ -2652,8 +2652,8 @@ public class Gen7Constants {
             {Items.maliciousArmor, 300},
             {Items.leadersCrest, 300},
             {Items.syrupyApple, 300},
-            {Items.unremarkableCup, 300},
-            {Items.masterpieceCup, 300},
+            {Items.unremarkableTeacup, 300},
+            {Items.masterpieceTeacup, 300},
             {Items.gimmighoulCoin, 300},
             {Items.raichuniteX, 500},
             {Items.raichuniteY, 500},
